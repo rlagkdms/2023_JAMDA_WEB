@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mainChart.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<div class="welcome">
+    <p>오늘도 같이 운동해봐요!</p>
+    <div class="pie animate" style="--c:#FF5555">
+        <p class="chart-title">현재 운동 완수율</p>
+        <p class="complete-percent">0%</p>
+        <div class="inside-bar"></div>
+        <div class="outside-bar"></div>
+    </div>
+    <div class="go-exercise">
+        <div class="go-exer-text" onclick="goExercise()">
+            운동하러 가기<iconify-icon rotate="90deg" icon="ep:arrow-up" class="arrow"></iconify-icon></div>
+    </div>
+</div>
+
+<div class="record-exercise">
+    <p>오늘 최애가 어떤 활동을 했나요?</p>
+    <div class="exer-kind-div"></div>
+</div>
+
+<div class="how-exercise">
+    <div class="how-exercise-title">
+        <p class="title-explain">운동 방법을 알려드려요</p>
+        <p class="see-detail" onclick="goHowExercise()">더보기<iconify-icon rotate="90deg" icon="ep:arrow-up" class="arrow"></iconify-icon></p>
+    </div>
+    <div class="show-youtube-div">
+        <div class="show-youtube">
+            <img src="https://img.youtube.com/vi/MWjKQGoNW0U/mqdefault.jpg" onclick="location.href='https://www.youtube.com/watch?v=MWjKQGoNW0U';"></img>
+            <p class="youtube-title" onclick="location.href='https://www.youtube.com/watch?v=MWjKQGoNW0U';">스쿼트 기초 l 강경원</p>
+            <p class="youtube-domain">https://www.youtube.com/watch?v=MWjKQGoNW0U</p>
+        </div>
+        <div class="show-youtube">
+            <img src="https://img.youtube.com/vi/OKhJCJ6zi6Q/mqdefault.jpg" onclick="location.href='https://www.youtube.com/watch?v=OKhJCJ6zi6Q';"></img>
+            <p class="youtube-title" onclick="location.href='https://www.youtube.com/watch?v=OKhJCJ6zi6Q';">[스쿼트] 무릎 박살나는 최악의 자세 4가지</p>
+            <p class="youtube-domain">https://www.youtube.com/watch?v=OKhJCJ6zi6Q</p>
+        </div>
+        <div class="show-youtube">
+            <img src="https://img.youtube.com/vi/NwYkSxCOYhk/mqdefault.jpg" onclick="location.href='https://www.youtube.com/watch?v=NwYkSxCOYhk';"></img>
+            <p class="youtube-title" onclick="location.href='https://www.youtube.com/watch?v=NwYkSxCOYhk';">'스쿼트' 허벅지만 아픈사람 필수시청! 엉덩이를 쓰세요!</p>
+            <p class="youtube-domain">https://www.youtube.com/watch?v=NwYkSxCOYhk</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="move-weight">
+    <p>몸무게가 이렇게 변했네요</p>
+    <div class="choose-date-div">
+        <div class="choose-date">
+            <div class="week date-div" onclick="clickWeek()">week</div>
+            <div class="month date-div" onclick="clickMonth()">month</div>
+            <div class="year date-div" onclick="clickYear()">year</div>
+        </div>
+    </div>
+
+    <div class="chart-div">
+        <div class="chart-kind">
+            <canvas id="myChart" width="300" height="180"></canvas>
+            <p class="standart-weight">58kg</p>
+        </div>
+    </div>
+</div>
+
+<div class="menu-div">
+    <div class="menu" id="choose-page" onclick="location.href='../html/main.html'">
+        <iconify-icon icon="ic:baseline-home" class="menu-icon"></iconify-icon>
+        <p>홈</p>
+    </div>
+    <div class="menu" onclick="location.href='../html/rule.html'">
+        <iconify-icon icon="mdi:cards-heart" class="menu-icon"></iconify-icon>
+        <p>규칙</p>
+    </div>
+    <div class="menu" onclick="location.href='../html/exercise.html'">
+        <iconify-icon icon="material-symbols:exercise" class="menu-icon"></iconify-icon>
+        <p>운동</p>
+    </div>
+    <div class="menu" onclick="location.href='../html/Calendar.html'" >
+        <iconify-icon icon="ph:calendar-blank" class="menu-icon"></iconify-icon>
+        <p>캘린더</p>
+    </div>
+    <div class="menu" onclick="location.href='../html/setting.html'">
+        <iconify-icon icon="material-symbols:settings" class="menu-icon"></iconify-icon>
+        <p>설정</p>
+    </div>
+</div>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/mainChart.js"></script>
+</body>
+</html>

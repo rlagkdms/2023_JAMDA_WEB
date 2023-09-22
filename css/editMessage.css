@@ -1,0 +1,145 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Hahmlet:wght@200;400;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.edit-btn{
+    font-size: 14px;
+    margin-top: 16px;
+    margin-left: 10%;
+}
+
+.message-div{
+    margin-top: 16px;
+}
+
+.messagePack{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.message{
+    position: relative;
+    margin-left: 10%;
+    padding-left: 2%;
+    width: 78%;
+    background-color: white;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.message-input{
+    position: relative;
+    margin-left: 10%;
+    padding-left: 2%;
+    width: 78%;
+    background-color: white;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.message-input:focus{
+    border: none;
+    text-decoration: underline;
+}
+
+.message-edit{
+    position: relative;
+    width: 92%;
+    margin-left: 3%;
+    padding-left: 5%;
+    background-color: white;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.message-edit:focus{
+    border: none;
+    text-decoration: underline;
+}
+.delete{
+    width: 10%;
+}
+.del-img{
+    position: absolute;
+    z-index: 10;
+}
+
+.plus-btn,
+.get-plsu,
+.check-btn{
+    position: absolute;
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    color:white;
+    font-size: 14px;
+    background-color: #ff6666;
+}
+.get-plsu,
+.check-btn{
+    visibility: hidden;
+}
+.btn-div{
+    /* background-color: aqua; */
+    height: 40px;
+}
+
+.alert{
+    width: 252px;
+    height: 160px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow : rgba(0, 0, 0, 0.1) 0 0 0 9999px, rgba(0,0,0,0.1) 0 0 0 0;
+    visibility: hidden;
+}
+.alert-title{
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 44px;
+    word-break: keep-all;
+}
+.alert-check{
+    background-color: white;
+    color: black;
+    position: relative;
+    margin-top: 100px;
+    left: 50%;
+    border: 0;
+    transform: translate(-50%);
+}
+.alert-check:hover{
+    background-color: white;
+}

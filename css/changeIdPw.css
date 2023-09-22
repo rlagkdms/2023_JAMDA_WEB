@@ -1,0 +1,109 @@
+section{
+    width: 100%;
+}
+.inputbox{
+    width: calc(100% - 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top:50px;
+}
+.short_input{
+    width: 68.9%;
+    height: 42px;
+}
+button{
+    box-sizing: border-box;
+    width: 28.04%;
+    height: 41px;
+    background-color: rgba(255, 194, 194, 1);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    margin-left: 5px;
+}
+button:hover{
+    background-color: rgba(255, 102, 102, 1);
+}
+button:checked{
+    background-color: rgba(255, 102, 102, 1);
+}
+label+div{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin:0 auto; 
+}
+input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-bottom:1px solid rgb(225, 225, 225,1);
+    margin-top: 7px;
+    padding:16px;
+    outline: none;
+}
+.eye{
+    position: absolute;
+    width: 18px;
+    height: 100%; 
+    right: 13px;
+    top:3px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.guide{
+    width: calc(100% - 32px);
+    font-size: 10px;
+    color: rgba(255, 102, 102, 1);
+    margin: 0 auto;
+    margin-top: 8px;
+
+}
+.change{
+    position: absolute;
+    background-color: #FF6666;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    bottom: 10px;
+}
+
+
+.alert{
+    width: 252px;
+    height: 160px;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow : rgba(0, 0, 0, 0.1) 0 0 0 9999px, rgba(0,0,0,0.1) 0 0 0 0;
+    visibility: hidden;
+}
+.alert-title{
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 44px;
+    word-break: keep-all;
+}
+
+.alert-check{
+    background-color: white;
+    color: black;
+    position: relative;
+    margin-top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.alert-check:hover{
+    background-color: white;
+}

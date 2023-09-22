@@ -1,0 +1,12 @@
+.chart-div{
+    position: relative;
+    margin-top: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 200px;
+}
+
+#myChart{
+    height: 200px;
+    margin: 0 auto;
+}

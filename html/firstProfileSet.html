@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/profilesetting.css" />
+    <link rel="stylesheet" href="../css/basic.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/startingProfileSet.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="exit" onclick="location.href='../html/login.html'"></div>
+        <span>프로필 설정</span>
+      </header>
+      <div class="content">
+        <div id="profile">
+          <input
+            type="file"
+            accept="image/*"
+            capture="camera"
+            style="display: none"
+            id="cameraInput"
+            name="profile_img"
+          />
+          <label id="btn" for="cameraInput">
+            <iconify-icon
+              icon="ic:outline-photo-camera"
+              style="color: white"
+              width="26"
+            ></iconify-icon>
+          </label>
+        </div>
+        <div class="section">
+          <span>닉네임</span>
+          <input type="text" id="name" />
+        </div>
+        <div class="section">
+          <span>최애</span>
+          <input type="text" id="bias" />
+        </div>
+        <div class="section">
+          <span>현재 몸무게</span>
+          <input type="text" id="weight" />
+        </div>
+        <div class="section">
+          <span>목표 몸무게</span>
+          <input type="text" id="goal_weight" />
+        </div>
+      </div>
+      <button onclick="submit();">확인</button>
+    </main>
+  </body>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</html>

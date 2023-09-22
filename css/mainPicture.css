@@ -1,0 +1,90 @@
+.content{
+    width: 100%;
+    height: 100%;
+}
+#pre_back{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+}
+#priview{
+    width: calc(100% - 99px);
+    height: calc(100% - 201px);
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.08) ,-4px -4px 4px 0px rgba(0, 0, 0, 0.08);
+}
+#listbox{
+    width: 100%;
+    height: 188px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom : 0;
+    box-shadow:  0 -4px 4px 0 rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+.tit_box{
+    margin: 0 auto;
+    width: 90.27%;
+    height: 53px;
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    /* margin-bottom: 32px; */
+}
+#tit{
+    font-size: 24px;
+    font-weight: bold;
+    /* background-color: antiquewhite; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: end;
+}
+#edit_btn{
+    font-size: 14px;
+    color: rgba(179, 179, 179, 1);
+}
+.backimg{
+    background: url('/image/image\ 7.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -6;
+}
+.boximg{
+    width: 100%;
+    height: 334px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    bottom: 0;
+    z-index: -5;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.08);
+
+}
+button{
+    box-sizing: border-box;
+    width:91.1%;
+    height: 5.25%;
+    background: rgba(255, 102, 102, 1);
+    border-radius: 10px;
+    border: none;
+    color: #ffff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom:58px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.08);
+
+}

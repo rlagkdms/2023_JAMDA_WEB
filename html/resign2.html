@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/basic.css" />
+    <link rel="stylesheet" href="../css/resign2.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <span>계정탈퇴</span>
+        <div class="exit" onclick="location.href='';"></div>
+      </header>
+      <div class="txtbox">
+        <span
+          >떠나시는 이유가 <br />
+          무엇인가요?</span
+        >
+      </div>
+      <div class="check-box">
+        <div class="list">
+          <input type="checkbox" id="reason" />
+          <div class="chbox noclick" onclick="sitBtn(event);"></div>
+          <span>앱을 잘 사용 안하게 돼요</span>
+        </div>
+
+        <div class="list">
+          <input type="checkbox" id="reason" />
+          <div class="chbox noclick" onclick="sitBtn(event);"></div>
+          <span>ui가 불편해요</span>
+        </div>
+
+        <div class="list">
+          <input type="checkbox" id="reason" />
+          <div class="chbox noclick" onclick="sitBtn(event);"></div>
+          <span>기능이 좋지 않아요</span>
+        </div>
+
+        <div class="list">
+          <input type="checkbox" id="reason" />
+          <div class="chbox noclick" onclick="sitBtn(event);"></div>
+          <span>다른 계정이 있어요</span>
+        </div>
+
+        <div class="list">
+          <input type="checkbox" id="reason" />
+          <div class="chbox noclick" onclick="sitBtn(event);"></div>
+          <span>기타</span>
+        </div>
+      </div>
+      <button onclick="submit();">탈퇴하기</button>
+
+      <div class="alert">
+        <div class="alert-title"></div>
+        <button class="alert-check" onclick="alertCheck()">확인</button>
+    </div>
+  
+    </main>
+    <script src="../js/resign2.js"></script>
+  </body>
+</html>

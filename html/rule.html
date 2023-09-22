@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/rule.css" />
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+<main>
+    
+    <section>
+        <input
+            type="file"
+            accept="image/*"
+            capture="camera"
+            style="display: none"
+            id="camerabtn"
+            onchange="uploadImage();"
+        />
+        <label id="btn" for="camerabtn">
+            <img src="/image/Vector (2).svg" alt="" />
+        </label>
+        <img class="background-img" src="../image/jamda_back.png"></img>
+        <!-- <img class="background-img"></img> -->
+        <div class="slide_box closed">
+            <div class="tit_box">
+                <span id="tit" onclick="scrollBox()">내 규칙</span>
+                <span id="edit_btn">편집</span>
+            </div>
+
+            <div id="resultbox"></div>
+            <button id="btn_plus">
+                <iconify-icon
+                        icon="ic:outline-plus"
+                        style="color: white"
+                        width="49"
+                        height="49"
+                ></iconify-icon>
+            </button>
+        </div>
+        <div id="delete_check">
+            <div class="delete_tit">
+                정말 삭제하시겠습니까?
+            </div>
+            <div>
+                <div id="delete_no">취소</div>
+                <div id="delete_ok">삭제</div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-div">
+        <div class="menu" onclick="location.href='../html/main.html'">
+            <iconify-icon icon="ic:baseline-home" class="menu-icon"></iconify-icon>
+            <p>홈</p>
+        </div>
+        <div class="menu" id="choose-page" onclick="location.href='../html/rule.html'">
+            <iconify-icon icon="mdi:cards-heart" class="menu-icon"></iconify-icon>
+            <p>규칙</p>
+        </div>
+        <div class="menu" onclick="location.href='../html/exercise.html'">
+            <iconify-icon icon="material-symbols:exercise" class="menu-icon"></iconify-icon>
+            <p>운동</p>
+        </div>
+        <div class="menu" onclick="location.href='../html/Calendar.html'" >
+            <iconify-icon icon="ph:calendar-blank" class="menu-icon"></iconify-icon>
+            <p>캘린더</p>
+        </div>
+        <div class="menu" onclick="location.href='../html/setting.html'">
+            <iconify-icon icon="material-symbols:settings" class="menu-icon"></iconify-icon>
+            <p>설정</p>
+        </div>
+    </div>
+
+    <div class="alert">
+        <div class="alert-title"></div>
+        <button class="alert-check" onclick="alertCheck()">확인</button>
+    </div>
+  
+</main>
+
+</body>
+<script src="../js/rule.js"></script>
+<script src="../js/addRule.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</html>

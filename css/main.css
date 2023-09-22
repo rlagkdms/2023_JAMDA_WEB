@@ -1,0 +1,338 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Hahmlet:wght@200;400;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.welcome{
+  position: relative;
+  margin-top: 53px;
+  margin-left: 16px;
+  border-radius: 10px;
+  width: calc(100% - 32px);
+  height: 309px;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.welcome > p{
+  position: relative;
+  top: 20px;
+  margin-left: 16px;
+  margin-bottom: 31px;
+}
+
+@property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+  }
+
+.pie {
+--p:0;
+--b:22px;
+--c:darkred;
+--w:160px;
+
+width:var(--w);
+aspect-ratio:1;
+position: absolute;
+display:inline-grid;
+margin:5px;
+place-content:center;
+left: 50%;
+transform: translate(-50%);
+}
+.pie:before,
+.pie:after {
+content:"";
+position:absolute;
+border-radius:50%;
+}
+.pie:before {
+inset:0;
+background:
+  radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+  conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+-webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - var(--b)),#000 calc(100% - var(--b)));
+        mask:radial-gradient(farthest-side,#0000 calc(100% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+inset:calc(50% - var(--b)/1.95);
+background:var(--c);
+transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+@keyframes p {
+from{--p:0}
+}
+
+.pie > .inside-bar{
+position: absolute;
+z-index: -1;
+border-radius: 50%;
+background-color: white;
+width: calc(var(--w) - var(--b) * 2 + (var(--b) / 4) * 2);
+height: calc(var(--w) - var(--b) * 2 + (var(--b) / 4) * 2);
+margin: 16px;
+margin: calc(var(--b) / 4 * 3);
+}
+
+.pie > .outside-bar{
+position: absolute;
+z-index: -2;
+border-radius: 50%;
+background-color: #C1C1C1;
+width: calc(var(--w) - var(--b) * 2 + (var(--b) / 1.5) * 2);
+height: calc(var(--w) - var(--b) * 2 + (var(--b) / 1.5) * 2);
+margin: calc(var(--b) / 1.5 * 0.5);
+}
+
+.chart-title{
+  font-size: 10px;
+}
+
+.complete-percent{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.go-exercise{
+  position: absolute;
+  width: calc(100% - 16px);
+  bottom: 0;
+  border-top: 1px solid #D1D1D1;
+  padding: 9px;
+  color: #8F8F8F;
+}
+
+.go-exer-text{
+  margin-left: calc(100% - 100px);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.arrow{
+  font-size: 16px;
+}
+
+
+.record-exercise{
+  position: relative;
+  /* background-color: aqua; */
+  width: calc(100% - 32px);
+  height: 140px;
+  margin-top: 16px;
+  margin-left: 16px;
+  border-radius: 10px;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 200px; */
+}
+
+.record-exercise > p{
+  position: relative;
+  top: 20px;
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+.exer-kind-div{
+  position: relative;
+  width: calc(100% - 32px);
+  top: 20px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+
+.exer-div{
+  border-radius: 10px;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.exer-name-div{
+  display: flex;
+  margin-left: 16px;
+  margin-top: 14px;
+  column-gap: 5px;
+  font-size: 10px;
+}
+.like-promise{
+  margin-left: 16px;
+}
+.do-count{
+  position: relative;
+  /* background-color: aqua; */
+  /* right: 10px; */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid #EAEAEA;
+  /* width: 84px; */
+  /* flex-shrink: 0; */
+  /* flex-basis: 84px; */
+  align-items: center;
+  margin-left: 46px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.do-count-minus{
+  width: 24px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #EAEAEA;
+  cursor: pointer;
+}
+.do-count-num{
+  font-size: 14px;
+}
+
+.do-count-plus{
+  width: 24px;
+  height: 16px;
+  display: flex;
+  /* align-items: end; */
+  /* padding-left: 3px; */
+  justify-content: center;
+  border-left: 1px solid #EAEAEA;
+  cursor: pointer;
+}
+.show-youtube-div::-webkit-scrollbar {
+  display: none;
+}
+.how-exercise{
+  position: relative;
+  width: calc(100% - 64px);
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 16px;
+  height: 300px;
+  margin-left: 16px;
+  border-radius: 10px;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.how-exercise-title{
+  position: relative;
+  top: 20px;
+  /* margin-left: 16px; */
+  margin-right: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.see-detail{
+  color: #8F8F8F;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.show-youtube{
+  position: relative;
+  margin-top: 36px;
+  /* margin-left: 16px; */
+}
+
+.show-youtube-div{
+  display: flex;
+  column-gap: 16px;
+  overflow-x: scroll;
+}
+
+.show-youtube > img{
+  width: 250px;
+  height: 142px;
+}
+
+.youtube-title{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.youtube-domain{
+  margin-top: 4px;
+  font-size: 10px;
+  color: #B3B3B3;
+}
+
+.move-weight{
+  position: relative;
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 16px;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 66px;
+}
+
+.move-weight > p{
+  position: relative;
+  top: 20px;
+  margin-left: 16px;
+}
+
+.choose-date-div{
+  display: flex;
+  justify-content: end;
+  margin-right: 29px;
+}
+
+.choose-date{
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  background-color: #FF6666;
+  margin-top: 28px;
+  width: 154px;
+  height: 26px;
+}
+
+.date-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 22px;
+  border-radius: 9px;
+  background-color: #FF6666;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.chart-kind{
+  position: relative;
+  /* left: 50%;
+  transform: translate(-50%); */
+  width: 300px;
+  height: 180px;
+  margin: auto;
+}
+
+#myChart{
+  position: absolute;
+}
+
+.standart-weight{
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  font-size: 10px;
+  color: #CC5252;
+}

@@ -1,0 +1,55 @@
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="../css/termsOfService.css" />
+  <link rel="stylesheet" href="../css/basic.css" />
+  <body>
+    <main>
+      <header>
+        <div class="exit" onclick="location.href='../html/login.html'"></div>
+        <span>약관 동의</span>
+      </header>
+
+      <div class="tit-box">
+        <span>환영합니다!</span>
+        잼다를 시작하기 전 아래 사항들을 확인해주세요
+      </div>
+
+      <div class="terms-box">
+        <div class="terms">
+          <div>
+            <div class="checkbox" onclick="checkTerm(event)"></div>
+            약관 전체동의
+          </div>
+        </div>
+        <div class="terms">
+          <div>
+            <div class="checkbox" onclick="checkTerm(event)"></div>
+            이용약관 동의(필수)
+          </div>
+
+          <img
+            src="/image/ic_round-arrow-back-ios -gray.svg"
+            onclick="location.href='../html/firstTerms.html';"
+          />
+        </div>
+        <div class="terms">
+          <div>
+            <div class="checkbox" onclick="checkTerm(event)"></div>
+            개인정보 수집 및 이용동의(필수)
+          </div>
+
+          <img
+            src="/image/ic_round-arrow-back-ios -gray.svg"
+            onclick="location.href='../html/firstUserules.html';"
+          />
+        </div>
+      </div>
+      <button onclick="location.href='../html/firstProfileSet.html';">다음</button>
+    </main>
+  </body>
+  <script src="../js/termsOfService.js"></script>
+</html>

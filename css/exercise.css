@@ -1,0 +1,494 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Hahmlet:wght@200;400;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+* {
+  margin:0;
+  padding:0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    background-color: #F0F0F0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.top-bar{
+    width: 100%;
+    height: 268px;
+    background-color: #FF6666;
+}
+
+.input-div{
+    position: absolute;
+    display: flex;
+    width: calc(100% - 34px);
+    height: 48px;
+    top: 60px;
+    left: 17px;
+    justify-content: center;
+    margin-right: 17px;
+    column-gap: 23px;
+    /* background-color: aqua; */
+}
+
+.profile-img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.input{
+    width: 243px;
+    height: 46px;
+    font-size: 13px;
+    border: 0;
+    padding-left: 13px;
+    border-radius: 8px;
+    background-color: white;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+
+/* 누적 운동량 - s*/
+.total-exercise{
+    position: relative;
+    background-color: white;
+    top: -128px;
+    width: calc(100% - 34px);
+    height: 275px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.total-exercise > p{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 17px;
+    padding-top: 22px;
+}
+
+
+
+li {
+  list-style: none;
+}
+.kind_wrap {
+  top: 20px;
+  width:100%;
+  height: 200px;
+  margin:0 auto;
+  position: relative;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.kind_slider{
+  position: relative;
+  /* padding-left: 40px;
+  padding-right: 40px; */
+  display: flex;
+  /* float: left; */
+  /* justify-content: center; */
+  flex-wrap: nowrap;
+  height: 200px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.exercise-page{
+  position: relative;
+  /* width: 249px; */
+  height: 0;
+  margin-left: 40px;
+  /* margin-right: 40px;  */
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  float: left;
+  flex-shrink: 0;
+  flex-basis: calc(100% - 40px);
+  /* float: left; */
+  gap: 10px;
+  }
+
+.show-exercise{
+  width: 100%;
+  top: 0;
+}
+.kind_wrap > .kind_slider .exercise-page {
+  position: relative;
+  transition: 0.5s;
+}
+
+.kind_wrap .arrow > a.prev {
+  position: absolute;
+  left: 0px;
+  top:100px;
+}
+.kind_wrap .arrow > a.next {
+  position: absolute;
+  right:0px;
+  top:100px;
+}
+
+.move-button{
+  color: black;
+  top: 50%;
+  transform: translate(0, -100%);
+  font-size: 40px;
+  cursor: pointer;
+}
+.show-exercise{
+  width: 110px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3px;
+}
+
+.exercise-title{
+  width: 100%;
+  height: 15px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.exercise-count{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.exercise-unit{
+  align-self: end;
+  font-size: 14px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+
+.page-count{
+  margin-top:5px;
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+input[type='radio'],
+input[type='radio']:checked {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 0.1rem;
+}
+
+input[type='radio'] {
+  background-color: #F0F0F0;
+}
+input[type='radio']:checked {
+   background-color: #FF6666;
+}
+/* 누적 운동량 - e*/
+
+/* 오늘의 목표 - s */
+.todayGoal{
+  width: calc(100% - 52px);
+  height: 56px;
+  background-color: white;
+  padding-left: 18px;
+  top: -112px;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.todayGoal > p{
+  font-weight: bold;
+
+}
+
+.changeGoal{
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 580px;
+  padding-bottom: 10px;
+  border-radius: 10px 10px 0 0 ;
+  bottom: 0;
+  background-color: white;
+  box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px, rgba(0,0,0,0) 0 0 0 0;
+  visibility: hidden;
+}
+
+.changeGoal > p{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 26px;
+}
+
+.base-rule-div{
+  margin-top: 36px;
+  height: 390px;
+  /* flex: 1; */
+  /* display: flex; */
+  flex-direction: column;
+  row-gap: 16px ;
+  overflow-y: scroll;
+}
+
+.base-rule-div::-webkit-scrollbar {
+  display: none;
+}
+
+.rule{
+  position: relative;
+  width: 288px;
+  height: 16px;
+  margin: auto;
+  margin-bottom: 16px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.08);
+
+}
+
+.rule:last-child{
+  margin-bottom: 10px;
+}
+
+.exercise-name{
+  display: flex;
+  align-items: center;
+
+}
+
+.goal-title{
+  font-size: 14px;
+}
+.goal-unit{
+  padding-left: 5px;
+  font-size: 12px;
+  color: #6B6B6B;
+}
+
+.move-count{
+  display: flex;
+  column-gap: 18px;
+}
+
+.goal-plus,
+.goal-minus{
+  font-size: 24px;
+}
+
+.button-div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 26px;
+  column-gap: 16px;
+}
+
+.close{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 110px;
+  height: 50px;
+  background-color: #E1E1E1;
+  cursor:pointer;
+}
+
+.okay{
+  width: 202px;
+  height: 50px;
+  background-color: #FF6666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor:pointer;
+  color: white;
+}
+/* 오늘의 목표 - e */
+
+/* 운동하기 - s */
+.do-exercise{
+  position: relative;
+  background-color: white;
+  top: -98px;
+  width: calc(100% - 34px);
+    height: 180px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.do-exercise > p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 17px;
+  padding-top: 22px;
+}
+
+.exercise-div{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.exercise-kind{
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 27px);
+  height: 90px;
+  padding-left: 27px;
+}
+
+.do-exer-title{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  align-items: end;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.do-exer-did,
+.doExerSlash{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.do-exer-count{
+  align-self: flex-end;
+  font-size: 20px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+.do-exer-unit{
+  width: 70%;
+  align-self: flex-end;
+  padding-bottom: 3px;
+}
+
+.do-exer-slider-div{
+  margin-top: 10px;
+  width: 260px;
+  position: relative;
+}
+
+.do-exer-slider{
+  position: absolute;
+  width: 260px;
+  /* margin-top: 10px; */
+  height: 4px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: linear-gradient(to right, #ececec 0%, #ececec 100%);
+  border-radius: 8px;
+  -webkit-appearance: none;
+  accent-color: #FF6666;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FF6666;
+  cursor: pointer;
+}
+
+.do-exer-graduation{
+  position: absolute;
+  display: flex;
+  width: 260px;
+  top: 50%;
+  transform: translate(0, -50%);
+  justify-content: space-evenly;
+}
+
+.graduation{
+  border-radius: 10px;
+  width: 1.5px;
+  height: 10px;
+  background-color: #ececec;
+}
+
+.complete-exercise{
+position: absolute;
+background-color: #FFC2C2;
+outline: none;
+border: 0;
+color: white;
+font-weight: bold;
+left: 50%;
+bottom: 30px;
+transform: translate(-50%);
+border-radius: 10px;
+margin: 0;
+width: 281px;
+height: 41px;
+margin-top: 30px;
+cursor: default;
+}
+
+
+/* 운동하기 - e */
+
+/* 메뉴 바 */
+/* .menu-div{
+  background-color: white;
+  justify-content: space-around;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px 10px 0 0 ;
+  box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    color: #B3B3B3;
+    cursor: pointer;
+}
+
+.menu > p{
+    font-size: 12px;
+}
+
+.menu-icon{
+    font-size: 20px;
+}
+
+#choose-page{
+    color:#FF6666;
+} */

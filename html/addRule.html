@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/addRule.css"/>
+    <link rel="stylesheet" href="../css/selectbox.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span>규칙 추가</span>
+        <div class="exit" onclick="back()"></div>
+      </header>
+      <section>
+        <span>만약 내 최애가</span>
+        <div class="act">
+          <input
+            type="text"
+            placeholder="행동"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='행동'"
+            id="activity"
+          />하면
+        </div>
+        <div class="exir">
+          <div class="selcbox">
+            <button class="label">
+              운동 <img src="../image/ep_arrow-up.svg" />
+            </button>
+            <ul class="optionList">
+              <li class="optionItem">러닝</li>
+              <li class="optionItem">스쿼트</li>
+              <li class="optionItem">싸이클</li>
+              <li class="optionItem">직접입력</li>
+            </ul>
+          </div>
+          을
+        </div>
+        <div class="size">
+          <input type="text" id="activity_num" />
+          <div class="selcbox">
+            <button class="label">
+              단위
+              <img src="../image/ep_arrow-up.svg" />
+            </button>
+            <ul class="optionList">
+              <li class="optionItem">km</li>
+              <li class="optionItem">set</li>
+              <li class="optionItem">min</li>
+              <li class="optionItem">직접입력</li>
+            </ul>
+          </div>
+          하기
+        </div>
+      </section>
+
+      <section class="max_min">
+        <span>이 운동을</span>
+        <div>
+          기본
+          <input
+            type="text"
+            placeholder="최솟값"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='최솟값'"
+            id="count_min"
+          />
+          만큼,
+        </div>
+        <div>
+          최대
+          <input
+            type="text"
+            placeholder="최대값"
+            onfocus="this.placeholder=''"
+            onblur="this.placeholder='최대값'"
+            id="count_max"
+          />만큼 합니다.
+        </div>
+      </section>
+      <button id="btnok" onclick="addRuleAndBack();">확인</button>
+    </main>
+
+    <div class="alert">
+      <div class="alert-title"></div>
+      <button class="alert-check" onclick="alertCheck()">확인</button>
+  </div>
+  </body>
+  <script src="../js/addRule.js"></script>
+  <script src="../js/selectbox.js"></script>
+</html>

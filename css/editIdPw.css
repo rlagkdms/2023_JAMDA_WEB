@@ -1,0 +1,27 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Hahmlet:wght@200;400;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+*{  
+    margin:0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+span:first-child{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.option-div{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}

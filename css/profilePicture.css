@@ -1,0 +1,44 @@
+button{
+    width:91.1%;
+    height: 5.25%;
+    background: rgba(255, 102, 102, 1);
+    border-radius: 10px;
+    border: none;
+    color: #ffff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom:58px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.container {
+    width: calc(100% - 32px);
+    height: calc(100% - 307px);
+    margin-top: 40px;
+
+}
+  .cropper-view-box {
+      outline: 0;
+      border: none;
+  }
+
+   */
+   .container {
+    margin: 20px auto;
+    max-width: 640px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .cropper-view-box,
+  .cropper-face {
+    border-radius: 50%;
+  }
+
+  /* The css styles for `outline` do not follow `border-radius` on iOS/Safari (#979). */
+  .cropper-view-box {
+    outline: none;
+    outline-color: transparent;
+  }

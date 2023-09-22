@@ -1,0 +1,35 @@
+.txtbox{
+    margin-top: 36px;
+    margin-bottom: 81px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+span:first-child{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+span:nth-child(2){
+    text-align: center;
+    color: #B3B3B3;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 14px;
+}
+button{
+    box-sizing: border-box;
+    width:91.1%;
+    height: 5.25%;
+    background: rgba(255, 102, 102, 1);
+    border-radius: 10px;
+    border: none;
+    color: #ffff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom:58px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.08);
+
+}

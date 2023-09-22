@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/basic.css" />
+    <link rel="stylesheet" href="/css/findIdPw.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="exit" onclick="location.href='/html/login.html';"></div>
+        <span>아이디 / 비밀번호 찾기</span>
+      </header>
+
+      <div class="menu">
+        <div class="slide"></div>
+        <div class="sub-menu">아이디</div>
+        <div class="sub-menu">비밀번호</div>
+      </div>
+
+      <div class="content findid">
+        <section class="fir">
+          <div class="row-div fir showid">
+          </div>
+        </section>
+        <button onclick="location.href='../html/login.html';" class="find">확인</button>
+      </div>
+
+      <div class="content findpw">
+        <section class="fir">
+          <span>아이디</span>
+          <div class="row-div fir">
+            <input type="text" value="" id="nowid" />
+          </div>
+        </section>
+        <section class="fir">
+          <span>바꿀 비밀번호</span>
+          <div class="row-div fir">
+            <input type="pw" value="" id="newpw"/>
+          </div>
+        </section>
+        <section class="fir">
+          <span>비밀번호 확인</span>
+          <div class="row-div fir">
+            <input type="pw" value="" id="newpw_check"/>
+          </div>
+        </section>
+     
+        <button class="find" onclick="pwChange();">비밀번호 변경하기</button>
+      </div>
+      <div class="alert">
+        <div class="alert-title"></div>
+        <button class="alert-check" onclick="alertCheck()">확인</button>
+    </div>
+  
+    </main>
+  </body>
+  <script src="/js/findIdPw.js"></script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/editMessage.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+         .notosanskr * { 
+        font-family: 'Noto Sans KR', sans-serif;
+        }
+        *{  
+            margin:0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }   
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        header{
+          box-sizing: border-box;
+          width:100%;
+          height: 56px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        header>.exit{
+          width: 24px;
+          height: 24px;
+          background: url(../image/ph_x.svg);
+          z-index: 1;
+          position: absolute;
+          left: 16px;
+        }
+        header> span{
+          font-size: 20px;
+          font-weight: bold;
+        }
+        main{
+          margin: 10px;
+          font-size: 10px;
+          word-break: break-all;
+        }
+        main > div{
+          white-space: pre-line;
+        }
+        p{
+          margin: 16px;
+          font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="exit" onclick="location.href='../html/setting.html'"></div>
+        <span>응원메세지 바꾸기</span>
+    </header>
+    <div class="edit-btn" onclick="edit()">편집</div>
+    <div class="message-div"></div>
+    <div class="btn-div" >
+      <div class="plus-btn" onclick="plus()">응원메세지 추가</div>
+      <div class="get-plsu" onclick="backHome()">추가하기</div>
+      <div class="check-btn" onclick="checkbtn()">확인</div>
+
+    </div>
+
+
+    <div class="alert">
+        <div class="alert-title"></div>
+        <button class="alert-check" onclick="alertCheck()">확인</button>
+    </div>
+
+    <script src="../js/editMessage.js"></script>
+</body>
+</html>

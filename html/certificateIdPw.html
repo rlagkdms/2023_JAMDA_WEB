@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/certificateIdPw.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+          <span>본인인증</span>
+          <div class="exit" onclick="location.href='/html/login.html'"></div>
+        </header>
+        <section>
+          <span>이메일</span>
+          <div class="row-div inputbox">
+            <input
+              type="email"
+              value=""
+              placeholder="이메일"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='이메일'"
+              class="in"
+              id="email"
+            />
+            <button  class="tel-number">인증번호 전송</button>
+          </div>
+        </section>
+
+        <section>
+          <span>인증 번호</span>
+          <div class="row-div inputbox">
+            <input
+              type="text"
+              value=""
+              placeholder="인증 번호 입력"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='인증 번호 입력'"
+              class="in"
+              id="auth"
+            />
+            <button onclick="checkAuthCode();" class="tel-number">확인</button>
+          </div>
+        </section>
+
+        <button onclick="btnok()" >아이디/비밀번호 찾기</button>
+
+        <div class="alert">
+          <div class="alert-title"></div>
+          <button class="alert-check" onclick="alertCheck()">확인</button>
+        </div>
+      
+      </main>
+
+</body>
+    <script src="../js/certificateIdPw.js"></script>
+</html>

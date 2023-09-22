@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/changeIdPw.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="exit" onclick="location.href='../html/editIdPw.html'"></div>
+        <span>아이디 변경</span>
+    </header>
+
+    <section>
+        <div class="inputbox">
+            <div>
+              <input type="text" name="sin_id" class="short_input s_id" id="id"/>
+              <button onclick="checkDuplicate();">중복확인</button>
+            </div>
+            <div class="guide">
+              영문 소문자와 숫자만을 이용하여 아이디를 입력해주세요.
+            </div>
+        </div>
+    </section>
+
+    <button class="change" onclick="change();">변경하기</button>
+    <script src="../js/editId.js"></script>
+</body>
+</html>

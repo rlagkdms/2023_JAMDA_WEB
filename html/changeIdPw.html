@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="../css/changeIdPw.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="exit" onclick="location.href='/html/login.html'"></div>
+        <span>아이디 / 비밀번호 변경</span>
+      </header>
+
+      
+      <section>
+        <div class="inputbox">
+            <label class="input_label">아이디</label>
+            <div>
+              <input type="text" name="sin_id" class="short_input s_id" />
+              <button>중복확인</button>
+            </div>
+            <div class="guide">
+              영문 소문자와 숫자만을 이용하여 아이디를 입력해주세요.
+            </div>
+        </div>
+        <div class="inputbox">
+            <label for="pw-text">현재 비밀번호</label>
+            <div>
+              <input
+                type="password"
+                name="pw-text"
+                placeholder="Password"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='Password'"
+                id="input-pw" class="input-pw"
+              />
+              <img
+                src="/image/iconoir_eye-alt.svg"
+                class="eye"
+                onclick="hiddenPw(0);"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="inputbox">
+            <label for="pw-text">비밀번호</label>
+            <div>
+              <input
+                type="password"
+                name="pw-text"
+                placeholder="Password"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='Password'"
+                id="input-pw" class="input-pw"
+              />
+              <img
+                src="/image/iconoir_eye-alt.svg"
+                class="eye"
+                onclick="hiddenPw(1);"
+              />
+            </div>
+          </div>
+          <div class="guide">
+            영문 소문자와 숫자, 특수문자를 사용하여 6-20자로 입력해주세요.
+        </div>
+        </div>
+       
+      </section>
+    </main>
+  </body>
+  <script src="/js/changeIdPw.js"></script>
+</html>

@@ -1,0 +1,296 @@
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Hahmlet:wght@200;400;700&family=Noto+Sans+KR:wght@400;500&display=swap');
+
+*{
+    margin : 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    background-color: #F0F0F0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.top{
+    height: 180px;
+    background-color: #FF6666;
+}
+
+.month{
+    color : white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 79px;
+}
+
+.year{
+    color:white;
+    font-size: 14px;
+    text-align:center;
+    padding-top:3px;
+}
+
+.calendar-div{
+    position:relative;
+    background-color:white;
+    top:-30px;
+    width: calc(100% - 32px);
+    height: 428px;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.Calendar{
+    width : 90%;
+    height: 90%;
+    margin: auto;
+    padding-top:20px;
+    /* background-color: pink; */
+}
+#btn-open{
+    background-color: white;
+    margin: 15px 17px;
+    float: right;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+}
+table,tr,td{
+    margin: 0;
+    font-size: 12px;
+}
+.stemp{
+    color: #FF6666;
+    margin-top:5px;
+    font-size:22px;
+}
+tr{
+    height: 50px;
+}
+td{
+    text-align: center;
+    vertical-align: top;
+}
+.head{
+    padding : 100px;
+}
+.color-picker{
+    position: fixed;
+    height:550px;
+    top:50%;
+    width: 328px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 10px;
+    background-color: white;
+    visibility: hidden;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px, rgba(0,0,0,0) 0 0 0 0;
+}
+
+.title{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* background-color: aqua; */
+    justify-content: space-between;
+}
+
+.color-edit{
+    margin-top: 20px;
+    margin-bottom: 0;
+    width: 200px;
+}
+
+#btn-close{
+    background-color: white;
+    /* width: 20%; */
+    /* margin-left: 40% !important; */
+    margin-top: 20px;
+    /* margin-top: 139%; */
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.monthlyRecord{
+    position:relative;
+    background-color:white;
+    width: calc(100% - 32px);
+    height:156px;
+    top : -15px;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.graph{
+    position: absolute;
+    background-color: #FFC2C2;
+    height: 26px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+}
+
+.exercise-graph{
+    background-color: #FF6666;
+    height: 26px;
+    /* width: calc(10 / 30 * 100%); */
+    border-radius: 50px;
+}
+.exercise-date{
+    position: relative;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    left: 5px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.month-date{
+    /* background-color: aqua; */
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: -26px;
+    line-height: 26px;
+    float: right;
+    font-size: 10px;
+    right: 5px;
+    text-align: center;
+}
+
+.finish-exercise{
+    margin-top: 44px;
+    font-size: 17px;
+    text-align: center;
+}
+.monthlyRecord > p,
+.exercise-record > p{
+    padding : 15px;
+}
+.exercise-record{
+    position:relative;
+    background-color:white;
+    width: calc(100% - 32px);
+    height:390px;
+    margin : auto;
+    /* top: 2px; */
+    margin-top: 0px;
+    margin-bottom : 66px;
+    border-radius: 10px;
+    box-shadow : 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+#canvas{
+    position: relative;
+    width: 327px;
+    height: 327px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.sec_cal {
+    width: 360px;
+    margin: 0 auto;
+    font-family: "NotoSansR";
+}
+
+.sec_cal .cal_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 78px;
+}
+
+.sec_cal .cal_nav .year-month {
+    width: 300px;
+    text-align: center;
+    line-height: 1;
+}
+
+.sec_cal .cal_nav .nav {
+    display: flex;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.sec_cal .cal_nav .go-prev,
+.sec_cal .cal_nav .go-next {
+    display: block;
+    width: 50px;
+    height: 78px;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec_cal .cal_nav .go-prev::before,
+.sec_cal .cal_nav .go-next::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000;
+    border-width: 3px 3px 0 0;
+    transition: border 0.1s;
+}
+
+.sec_cal .cal_nav .go-prev:hover::before,
+.sec_cal .cal_nav .go-next:hover::before {
+    border-color: #ed2a61;
+}
+
+.sec_cal .cal_nav .go-prev::before {
+    transform: rotate(-135deg);
+}
+
+.sec_cal .cal_nav .go-next::before {
+    transform: rotate(45deg);
+}
+
+.sec_cal .cal_wrap {
+    padding-top: 40px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.sec_cal .cal_wrap .days {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sec_cal .cal_wrap::after {
+    top: 368px;
+}
+
+.sec_cal .cal_wrap .day {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 7);
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    border-radius:5px
+}
+
+
+
+
+
