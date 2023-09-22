@@ -46,7 +46,7 @@ function change() {
       .then((response) => {
         alertDiv.style.visibility = "visible";
         alertTitle.innerText = response.data.message;
-        window.location.href='./editIdPw.html';
+        window.location.href='/html/editIdPw.html';
       })
       .catch((error) => {
         console.error("비밀번호 변경 중 오류 발생:", error);

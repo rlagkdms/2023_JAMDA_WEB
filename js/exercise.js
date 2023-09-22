@@ -305,7 +305,7 @@ function moveDoExercise(event){
 
 function completeExerciseButton(){
   if(flag === true){
-    window.location.href = "../html/exerciseComplete.html";
+    window.location.href = "/html/exerciseComplete.html";
   }
 }
 

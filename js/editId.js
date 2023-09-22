@@ -22,7 +22,7 @@ function change(){
     }, {headers: { authorization: token }})
     .then((response) => {
         alert(response.data.message); // 변경 결과에 따라 메시지를 표시
-        window.location.href='./editIdPw.html';
+        window.location.href='/html/editIdPw.html';
     })
     .catch((e) => {
         console.error("Error during user ID change:", e);

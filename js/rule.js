@@ -110,7 +110,7 @@ function addList(){
                   }
             }
             if(editBtn.textContent == '완료'){
-                location.href = '../html/editRule.html'
+                location.href = '/html/editRule.html'
             }
         }
 
@@ -242,7 +242,7 @@ function uploadImage() {
     console.log(selectedImage);
     if (selectedImage) {
         // 이미지를 다음 페이지로 전달
-        const url = 'mainPicture.html';
+        const url = '/html/mainPicture.html';
         const formData = new FormData();
         formData.append('image', selectedImage);
 

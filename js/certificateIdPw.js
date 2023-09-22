@@ -39,7 +39,7 @@ input2.onclick = () => {
 
 function btnok(){
     if(!(btn1.value==='')&&!(btn2.value==='')){
-        location.href = '../html/findIdPw.html';
+        location.href = '/html/findIdPw.html';
         findId();
     }
 

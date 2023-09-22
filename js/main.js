@@ -80,7 +80,7 @@ function getNowCount() {
   }
 
 function goExercise(){
-    window.location.href = "../html/exercise.html";
+    window.location.href = "/html/exercise.html";
 } 
 
 function getPercent(){
@@ -207,5 +207,5 @@ function decreaseCount(uuid) {
 
 /* record-exer */
 function goHowExercise(){
-    window.location.href="./howExercise.html"
+    window.location.href="/html/howExercise.html"
 }

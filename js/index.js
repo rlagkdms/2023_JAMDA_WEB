@@ -26,9 +26,9 @@ function alertCheck(){
   }
   alertDiv.style.visibility = "hidden"; //원래 창으로 돌아갈 때 이 코드
   if (hasProfile === 0) {
-    window.location.href = "../html/termsOfService.html"; // 프로필 설정이 필요한 경우
+    window.location.href = "/html/termsOfService.html"; // 프로필 설정이 필요한 경우
   } else {
-    window.location.href = "../html/main.html"; // 이미 프로필 설정이 된 경우
+    window.location.href = "/html/main.html"; // 이미 프로필 설정이 된 경우
   }
 } 
 

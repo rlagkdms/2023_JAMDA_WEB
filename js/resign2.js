@@ -40,7 +40,7 @@ function submit() {
         alertDiv.style.visibility = "visible";
         alertTitle.innerText = response.data.message;// 메시지를 알림창으로 표시
 
-        window.location.href = "/html/login.html";
+        window.location.href = "../index.html";
       })
       .catch((error) => {
         // 탈퇴에 실패하거나 오류가 발생한 경우 오류 메시지를 처리

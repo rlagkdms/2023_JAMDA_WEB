@@ -6,7 +6,7 @@ function alertCheck(){
 } 
 
 function moveToCalendar(){
-    window.location.href = "../html/Calendar.html";
+    window.location.href = "/html/Calendar.html";
 }
 function addDate(){
     const id = localStorage.getItem('userid');

@@ -12,7 +12,7 @@ function uploadImage() {
   console.log(selectedImage);
   if (selectedImage) {
       // 이미지를 다음 페이지로 전달
-      const url = 'profilePicture.html';
+      const url = '/html/profilePicture.html';
       const formData = new FormData();
       formData.append('image', selectedImage);
 
@@ -52,7 +52,7 @@ axios
 }, {headers: { authorization: token }},)
   .then((response) => {
     console.log('프로필이 업데이트되었습니다.', response.data);
-    window.location.href="./setting.html";
+    window.location.href="/html/setting.html";
   })
   .catch((error) => {
     // 업데이트 중 오류 발생 시 처리

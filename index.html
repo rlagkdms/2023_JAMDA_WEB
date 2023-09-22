@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/login.css" />
-    <link rel="stylesheet" href="../css/basic.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/basic.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -26,8 +26,8 @@
                 id="id"
             />
         </div>
+        
     </div>
-
     </div>
     <div class="inputbox">
         <label>패스워드</label>
@@ -41,7 +41,7 @@
                 id="pw"
             />
             <img
-                src="../image/iconoir_eye-alt.svg"
+                src="/image/iconoir_eye-alt.svg"
                 class="eye"
                 onclick="hiddenPw();"
             />
@@ -54,21 +54,21 @@
 
     <div class="bottom-div">
         <div class="find-div">
-            <div class="find-id" onclick="location.href='./certificateIdPw.html';">
+            <div class="find-id" onclick="location.href='/html/certificateIdPw.html';">
                 아이디 찾기
             </div>
             <div class="find-slash">|</div>
-            <div class="find-pw" onclick="location.href='./certificateIdPw.html'">
+            <div class="find-pw" onclick="location.href='/html/certificateIdPw.html'">
                 비밀번호 찾기
             </div>
         </div>
-        <div class="new-people" onclick="location.href='./signup.html';">
+        <div class="new-people" onclick="location.href='/html/signup.html';">
             회원가입
         </div>
     </div>
 </main>
 </body>
-<div class="new-people"><a href="file:///android_asset/html/signup.html">회원가입</a></div>
+<div class="new-people"><a href="/html/signup.html">회원가입</a></div>
 <div class="alert">
     <div class="alert-title"></div>
     <button class="alert-check" onclick="alertCheck()">확인</button>
@@ -77,7 +77,7 @@
 </div>
 
 </main>
-<script src="../js/login.js"></script>
+<script src="/js/index.js"></script>
 </body>
 
 </html>

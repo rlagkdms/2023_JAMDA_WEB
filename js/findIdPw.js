@@ -88,7 +88,7 @@ function pwChange() {
 }
 function alertCheck(){
   alertDiv.style.visibility = "hidden"; 
-//   location.href = '../html/login.html';
+//   location.href = '../index.html';
 }
 
 // 아이디 찾는 함수
@@ -113,7 +113,7 @@ function findId() {
 
 function alertCheck() {
   if(alertTitle.innerText == "비밀번호가 변경되었습니다."){
-    window.location.href = "../html/login.html"
+    window.location.href = "../index.html"
   }
   alertDiv.style.visibility = "hidden";
 }

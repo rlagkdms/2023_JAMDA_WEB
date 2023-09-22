@@ -63,7 +63,7 @@ function check(flag){
     })
     .then((response) => {
       if (response.status === 200) {
-        window.location.href = './login.html'; 
+        window.location.href = 'index.html'; 
       } else {
         alertDiv.style.visibility = "visible";
         alertTitle.innerText = '로그아웃 실패';
@@ -73,7 +73,7 @@ function check(flag){
       alertDiv.style.visibility = "visible";
       alertTitle.innerText = '로그아웃 중 오류 발생';
     });
-      window.location.href = "./login.html";
+      window.location.href = "../index.html";
   }
 }
 

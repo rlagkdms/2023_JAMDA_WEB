@@ -2,7 +2,7 @@ let alertDiv = document.getElementsByClassName('alert')[0];
 let alertTitle = document.getElementsByClassName('alert-title')[0];
 function alertCheck(){
   if(alertTitle.innerText == "프로필이 설정되었습니다."){
-    window.location.href = '../html/main.html';
+    window.location.href = '/html/main.html';
   }
   alertDiv.style.visibility = "hidden";
 } 

@@ -3,7 +3,7 @@ let alertTitle = document.getElementsByClassName('alert-title')[0];
 
 function alertCheck(){
     if(alertTitle.innerText == "회원가입 되었습니다."){
-      window.location.href = "../html/login.html";
+      window.location.href = "../index.html";
     }else{
       alertDiv.style.visibility = "hidden";
     }
@@ -98,7 +98,7 @@ function checkDuplicate() {
           console.log("Registration successful!");
           alertDiv.style.visibility = "visible";
           alertTitle.innerText = "회원가입 되었습니다."
-          // window.location.href = "../html/login.html";
+          // window.location.href = "../index.html";
         } else {
           alertDiv.style.visibility = "visible";
           alertTitle.innerText = "인증코드가 일치하지 않습니다. 다시 확인해주세요."

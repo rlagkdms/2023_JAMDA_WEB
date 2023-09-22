@@ -3,6 +3,6 @@ async function fetchHtmlAsText(url) {
 }
 
 async function importPage(target) {
-    document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+    document.querySelector('#' + target).innerHTML = await fetchHtmlAsText('/html/'+target + '.html');
 }
 importPage('userules');

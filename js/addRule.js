@@ -119,12 +119,12 @@ function addRuleAndBack() {
 
 
 function back(){
-  window.location.href = "./rule.html";
+  window.location.href = "/html/rule.html";
 }
 
 function alertCheck(){
   if(addAlertTitle.innerText == "규칙이 추가 되었습니다."){
-    window.location.href = "../html/rule.html";
+    window.location.href = "/html/rule.html";
   }
   addAlertDiv.style.visibility = "hidden";
 

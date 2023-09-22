@@ -18,6 +18,6 @@ button.onclick = function (){
     if(checkbox[0].classList.contains("checkbox-toggle") &&
         checkbox[1].classList.contains("checkbox-toggle") &&
         checkbox[2].classList.contains("checkbox-toggle")){
-        location.href = '../html/startingProfileSet.html';
+        location.href = '/html/startingProfileSet.html';
     }
 }

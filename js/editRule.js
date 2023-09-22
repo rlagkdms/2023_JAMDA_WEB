@@ -222,7 +222,7 @@ function updateRules() {  // 이거 아침에 물어보기
 } 
 
 function back(){
-  window.location.href = "./rule.html";
+  window.location.href = "/html/rule.html";
 }
 function alertCheck(){
   addAlertDiv.style.visibility = "hidden";
