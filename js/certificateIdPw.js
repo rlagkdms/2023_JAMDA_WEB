@@ -51,7 +51,7 @@ function emailsubmit() {
     var authCode = document.getElementById("auth").value;
   axios
     // 아이디 중복 확인 API 엔드포인52.78.221.233os
-    .post("http://52.78.221.233:3000/users/certificate", {
+    .post("https://52.78.221.233:3000/users/certificate", {
       email: email,
       authCode : authCode
     })
@@ -81,7 +81,7 @@ function emailsubmit() {
       return;
     }
     axios
-      .post("http://52.78.221.233:3000/users/check-auth-code", {
+      .post("https://52.78.221.233:3000/users/check-auth-code", {
         email: email,
         code: authCode,
       })
@@ -109,7 +109,7 @@ function findId() {
   var email = document.getElementById("email").value;
 
   axios
-    .post("http://52.78.221.233:3000/users/findUserId", {
+    .post("https://52.78.221.233:3000/users/findUserId", {
       email: email,
     })
     .then((response) => {

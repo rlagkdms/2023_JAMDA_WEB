@@ -34,7 +34,7 @@ header{
 header>.exit{
     width: 24px;
     height: 24px;
-    background: url(../image/ph_x.svg);
+    background: url(/image/ph_x.svg);
     z-index: 1;
     position: absolute;
     left: 16px;

@@ -14,7 +14,7 @@ function checkDuplicate() {
   
     // 아이디 중복 확인 API 엔드포인트 수정
         axios
-        .post("http://52.78.221.233:3000/users/check-duplicate", {
+        .post("https://52.78.221.233:3000/users/check-duplicate", {
             userid: id,
         })
         .then((response) => {
@@ -87,7 +87,7 @@ function checkDuplicate() {
   
     console.log("Sending registration request with ID:", id);
     axios
-    .post("http://52.78.221.233:3000/users/signup", { // URL 수정
+    .post("https://52.78.221.233:3000/users/signup", { // URL 수정
         userid: id,
         pw: pw_1,
         email: email,
@@ -118,7 +118,7 @@ function checkDuplicate() {
   
     // 아이디 중복 확인 API 엔드포인트 수정
     axios
-    .post("http://52.78.221.233:3000/users/certificate", {
+    .post("https://52.78.221.233:3000/users/certificate", {
       email: email,
       authCode : authCode
     })
@@ -148,7 +148,7 @@ function checkDuplicate() {
     }
   
     axios
-      .post("http://52.78.221.233:3000/users/check-auth-code", {
+      .post("https://52.78.221.233:3000/users/check-auth-code", {
         email: email,
         code: authCode,
       })

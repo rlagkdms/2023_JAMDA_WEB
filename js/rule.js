@@ -25,7 +25,7 @@ function fetchRules() {
   const token = localStorage.getItem("token");
   
   // 서버로 GET 요청을 보냅니다.
-  axios.get('http://52.78.221.233:3000/users/getRules', {
+  axios.get('https://52.78.221.233:3000/users/getRules', {
       headers: {
           Authorization: token // 토큰을 헤더에 포함
       }
@@ -81,7 +81,7 @@ function addList(){
         //규칙 삭제 버튼 추가
         img = new Image();
         img.classList.add('delimg');
-        img.src = '../image/ei_minus.svg';
+        img.src = '/image/ei_minus.svg';
 
         img.style.position = "absolute";
         img.style.top = "-5px";
@@ -138,7 +138,7 @@ function addList(){
 
 function getAllRulesByUuid(uuid) {
     axios
-    .post("http://52.78.221.233:3000/users/getAllRulesByUuid", {
+    .post("https://52.78.221.233:3000/users/getAllRulesByUuid", {
         uuid: uuid    
     })
     .then((response) => {
@@ -167,7 +167,7 @@ function getAllRulesByUuid(uuid) {
 
 function deleteRule(uuid) {
     axios
-    .post("http://52.78.221.233:3000/users/deleteRule", {
+    .post("https://52.78.221.233:3000/users/deleteRule", {
         uuid: uuid    
     })
     .then((response) => {

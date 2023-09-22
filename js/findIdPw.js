@@ -70,7 +70,7 @@ function pwChange() {
   }
 
   axios
-    .post("http://52.78.221.233:3000/users/loginChangePassword", {
+    .post("https://52.78.221.233:3000/users/loginChangePassword", {
       userid: userid,
       newPassword: checkPw.value
     })
@@ -96,7 +96,7 @@ function findId() {
   var email = document.getElementById("email").value;
 
   axios
-    .post("http://52.78.221.233:3000/users/findUserId", {
+    .post("https://52.78.221.233:3000/users/findUserId", {
       email: email,
     })
     .then((response) => {

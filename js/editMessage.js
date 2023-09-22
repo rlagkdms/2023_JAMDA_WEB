@@ -27,7 +27,7 @@ function edit(flag){
             messages.className = "message-edit";
             messages.value = `${messageData[i]}`;
             del.className = "delete";
-            del.innerHTML = `<img src="../image/ei_minus.svg" class="del-img"/>`;
+            del.innerHTML = `<img src="/image/ei_minus.svg" class="del-img"/>`;
             del.onclick = (event) => deleteMessageFront(event);
             messagePack.appendChild(del);
             messagePack.appendChild(messages);
@@ -110,7 +110,7 @@ function addMessage(messageData){
     const updates = [
         { userid: userid, message: messageData }
     ]
-    axios.post('http://52.78.221.233:3000/users/message', {
+    axios.post('https://52.78.221.233:3000/users/message', {
         updates
     })
     .then((response) => {
@@ -124,7 +124,7 @@ function addMessage(messageData){
 // 메시지 불러오기
 function getMessage(flag){
     const userid = localStorage.getItem("userid");
-    axios.post('http://52.78.221.233:3000/users/getMessage', {
+    axios.post('https://52.78.221.233:3000/users/getMessage', {
           userid : userid,
       })
       .then((response) => {
@@ -146,7 +146,7 @@ function getMessage(flag){
 
 // 메시지 삭제
 function deleteMessage(userid){
-    axios.post('http://52.78.221.233:3000/users/deleteMessage', {
+    axios.post('https://52.78.221.233:3000/users/deleteMessage', {
           uuid : userid,    // 여기에 삭제 할 uuid 넣이 
       })
       .then((response) => {
@@ -164,7 +164,7 @@ function changeMessage(uuid, messageData){
     const updates = [
         { uuid : uuid , message: messageData }  // 여기에 uuid배열하고 수정할 메시지 배열 넣기
     ]
-    axios.post('http://52.78.221.233:3000/users/changeMessage', {
+    axios.post('https://52.78.221.233:3000/users/changeMessage', {
           updates
       })
       .then((response) => {

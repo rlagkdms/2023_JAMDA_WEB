@@ -10,11 +10,11 @@ function hiddenPw(){
 
   if(pwDiv.type === "password"){
       pwDiv.type = "text";
-      hiddenbtn.src = "../image/eye-close.svg";
+      hiddenbtn.src = "/image/eye-close.svg";
   }
   else{
       pwDiv.type = "password";
-      hiddenbtn.src = "../image/iconoir_eye-alt.svg";
+      hiddenbtn.src = "/image/iconoir_eye-alt.svg";
   }
 }
 
@@ -41,7 +41,7 @@ function submitLogin() {
 
     // 클라이언트 로그인 후
   axios
-  .post("http://52.78.221.233:3000/users/login", {
+  .post("https://52.78.221.233:3000/users/login", {
     userid: id,
     pw: pw,
   })

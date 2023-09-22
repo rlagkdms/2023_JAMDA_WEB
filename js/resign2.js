@@ -32,7 +32,7 @@ function submit() {
   
     // 서버로의 POST 요청 보내기
     axios
-      .post("http://52.78.221.233:3000/users/leave", {
+      .post("https://52.78.221.233:3000/users/leave", {
       }, {headers: { authorization: token }},)
       .then((response) => {
         // 성공적으로 탈퇴될 경우 서버에서 반환한 메시지를 처리

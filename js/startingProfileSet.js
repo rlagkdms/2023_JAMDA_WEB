@@ -20,7 +20,7 @@ function submit() {
 
   axios
     .post(
-      'http://52.78.221.233:3000/users/setProfile',
+      'https://52.78.221.233:3000/users/setProfile',
       {
         name: name,
         bias: bias,

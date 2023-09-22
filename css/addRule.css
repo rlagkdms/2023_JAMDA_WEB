@@ -36,7 +36,7 @@ header{
 header>.exit{
     width: 24px;
     height: 24px;
-    background: url(../image/ph_x.svg);
+    background: url(/image/ph_x.svg);
 }
 header> span{
     font-size: 20px;
@@ -84,7 +84,7 @@ select{
     -moz-appearance: none;
     appearance: none;
     box-shadow: none;
-    /* background: url(../image/ep_arrow-up.svg) no-repeat 95% 50%;  */
+    /* background: url(/image/ep_arrow-up.svg) no-repeat 95% 50%;  */
 }   
 li{
     color:rgba(194, 194, 194, 1);

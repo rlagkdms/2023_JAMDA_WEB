@@ -34,7 +34,7 @@ function firstInput(){
 
 function getAllRulesByUuid() {
   axios
-  .post("http://52.78.221.233:3000/users/getAllRulesByUuid", {
+  .post("https://52.78.221.233:3000/users/getAllRulesByUuid", {
       uuid: listUuid    
   })
   .then((response) => {
@@ -59,7 +59,7 @@ getAllRulesByUuid();
 function fetchRules() {
   const token = localStorage.getItem("token");
   
-  axios.get('http://52.78.221.233:3000/users/getRules', {
+  axios.get('https://52.78.221.233:3000/users/getRules', {
       headers: {
           Authorization: token // 토큰을 헤더에 포함   
       }
@@ -83,7 +83,7 @@ fetchRules();
 
 function updateRules() {  // 이거 아침에 물어보기 
   axios
-  .post("http://52.78.221.233:3000/users/updateRules", {
+  .post("https://52.78.221.233:3000/users/updateRules", {
      
       uuid: listUuid,
       activity: favorite_act.value,
@@ -104,12 +104,12 @@ function updateRules() {  // 이거 아침에 물어보기
 
 //변경값 
 function addRuleAndBack() {
-  if (exer_select.innerHTML == '<input type="text"> <img src="../image/ep_arrow-up.svg">') {
+  if (exer_select.innerHTML == '<input type="text"> <img src="/image/ep_arrow-up.svg">') {
       exer_select = exer_select.firstChild.value;
   } else {
       exer_select = exer_select.textContent;
   }
-  if (exer_unit.innerHTML == '<input type="text"> <img src="../image/ep_arrow-up.svg">') {
+  if (exer_unit.innerHTML == '<input type="text"> <img src="/image/ep_arrow-up.svg">') {
       exer_unit = exer_unit.firstChild.value;
   } else {
       exer_unit = exer_unit.textContent;
@@ -176,7 +176,7 @@ function addRuleAndBack() {
 function fetchRules() {
   const token = localStorage.getItem("token");
   
-  axios.get('http://52.78.221.233:3000/users/getRules', {
+  axios.get('https://52.78.221.233:3000/users/getRules', {
       headers: {
           Authorization: token // 토큰을 헤더에 포함   
       }
@@ -202,7 +202,7 @@ fetchRules();
  
 function updateRules() {  // 이거 아침에 물어보기 
   axios
-  .post("http://52.78.221.233:3000/users/updateRules", {
+  .post("https://52.78.221.233:3000/users/updateRules", {
       uuid: listUuid,
       activity: favorite_act.value,
       exercise: exer_select,

@@ -12,7 +12,7 @@ function fetchAndDisplayUserName() {
   const token = localStorage.getItem('token');
   
   axios
-    .get('http://52.78.221.233:3000/users/getUserInfo', {
+    .get('https://52.78.221.233:3000/users/getUserInfo', {
       headers: {
         authorization: token,
       },
@@ -58,7 +58,7 @@ function check(flag){
   const id = localStorage.getItem('userid');
   if(flag){
     axios
-    .post('http://52.78.221.233:3000/users/logout', {
+    .post('https://52.78.221.233:3000/users/logout', {
       userid: id, 
     })
     .then((response) => {
@@ -73,7 +73,7 @@ function check(flag){
       alertDiv.style.visibility = "visible";
       alertTitle.innerText = '로그아웃 중 오류 발생';
     });
-      window.location.href = "../index.html";
+      window.location.href = "/index.html";
   }
 }
 

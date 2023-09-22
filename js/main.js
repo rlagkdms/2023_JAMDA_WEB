@@ -18,7 +18,7 @@ let innerPercent = document.getElementsByClassName('complete-percent')[0];
 function fetchRules() {
     const token = localStorage.getItem("token");
 
-    axios.get('http://52.78.221.233:3000/users/getRules', {
+    axios.get('https://52.78.221.233:3000/users/getRules', {
         headers: {
             Authorization: token 
         }
@@ -51,7 +51,7 @@ function fetchRules() {
     
 function getCount(){
     const userid = localStorage.getItem("userid");
-    axios.post('http://52.78.221.233:3000/users/getTodayCount', {
+    axios.post('https://52.78.221.233:3000/users/getTodayCount', {
           userid : userid
       })
       .then((response) => {
@@ -66,7 +66,7 @@ function getNowCount() {
     const userid = localStorage.getItem("userid");
   
     axios
-    .post("http://52.78.221.233:3000/users/getNowCount", {
+    .post("https://52.78.221.233:3000/users/getNowCount", {
         userid : userid  
     })
     .then((response) => {
@@ -183,7 +183,7 @@ recordExerDiv.addEventListener('click', function(event){
 
 function increaseCount(uuid) {
     axios
-    .post("http://52.78.221.233:3000/users/increaseCount", {
+    .post("https://52.78.221.233:3000/users/increaseCount", {
         uuid: uuid    
     })
     .then((response) => {
@@ -195,7 +195,7 @@ function increaseCount(uuid) {
 
 function decreaseCount(uuid) {
     axios
-    .post("http://52.78.221.233:3000/users/decreaseCount", {
+    .post("https://52.78.221.233:3000/users/decreaseCount", {
         uuid: uuid    
     })
     .then((response) => {

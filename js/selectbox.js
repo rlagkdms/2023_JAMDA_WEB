@@ -37,12 +37,12 @@ const handleSelect = (label, item) => {
     label.innerHTML = item.textContent;
 
     if(label.innerHTML !=='직접입력'){
-    label.innerHTML += '<img src="../image/ep_arrow-up.svg"/>';
+    label.innerHTML += '<img src="/image/ep_arrow-up.svg"/>';
     }
     else{
-        label.innerHTML = '<input type="text"/> <img src="../image/ep_arrow-up.svg"/>';
+        label.innerHTML = '<input type="text"/> <img src="/image/ep_arrow-up.svg"/>';
         for (const btn of document.getElementsByClassName('label')) {
-            if(label.innerHTML = '<input type="text"> <img src="../image/ep_arrow-up.svg">'){
+            if(label.innerHTML = '<input type="text"> <img src="/image/ep_arrow-up.svg">'){
                 console.log(label.childNodes);
                 label.firstChild.focus();
                 console.log(label.firstChild);

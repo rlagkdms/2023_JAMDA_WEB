@@ -12,7 +12,7 @@ function addDate(){
     const id = localStorage.getItem('userid');
 
     axios
-    .post("http://52.78.221.233:3000/users/dateCalendar", {
+    .post("https://52.78.221.233:3000/users/dateCalendar", {
         userid: id,
     })
     .then((response) => {

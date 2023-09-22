@@ -44,7 +44,7 @@ const token = localStorage.getItem("token");
 
 // Axios를 사용하여 서버로 요청 보내기
 axios
-.post("http://52.78.221.233:3000/users/update-profile", {
+.post("https://52.78.221.233:3000/users/update-profile", {
   name: name,
   bias: bias,
   weight: weight,

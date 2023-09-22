@@ -16,7 +16,7 @@ window.onload = function () {
 }
 function getCountFirst(){
   const userid = localStorage.getItem("userid");
-  axios.post('http://52.78.221.233:3000/users/getTodayCount', {
+  axios.post('https://52.78.221.233:3000/users/getTodayCount', {
         userid : userid
     })
     .then((response) => {
@@ -31,7 +31,7 @@ function getCountFirst(){
 
 function getMessage(){
   const userid = localStorage.getItem("userid");
-  axios.post('http://52.78.221.233:3000/users/getMessage', {
+  axios.post('https://52.78.221.233:3000/users/getMessage', {
         userid : userid,
     })
     .then((response) => {
@@ -57,7 +57,7 @@ function fetchRules() {
   const token = localStorage.getItem("token");
 
     // 서버로 GET 요청을 보냅니다.
-  axios.get('http://52.78.221.233:3000/users/getRules', {
+  axios.get('https://52.78.221.233:3000/users/getRules', {
       headers: {
           Authorization: token // 토큰을 헤더에 포함
       }
@@ -452,7 +452,7 @@ function updateCounts(uuid,goalData) {
   ];
 
   axios
-    .post('http://52.78.221.233:3000/users/updateCounts', { updates })
+    .post('https://52.78.221.233:3000/users/updateCounts', { updates })
     .then((response) => {
       console.log('서버 응답:', response.data);
       getCount();
@@ -464,7 +464,7 @@ function updateCounts(uuid,goalData) {
 
 function getCount(){
   const userid = localStorage.getItem("userid");
-  axios.post('http://52.78.221.233:3000/users/getTodayCount', {
+  axios.post('https://52.78.221.233:3000/users/getTodayCount', {
         userid : userid
     })
     .then((response) => {
@@ -569,7 +569,7 @@ function getCompleteDate(){
 
   let today = new Date().getDate().toString();
   let getComDate = [];
-  axios.get('http://52.78.221.233:3000/users/getCompleteDate', {
+  axios.get('https://52.78.221.233:3000/users/getCompleteDate', {
       headers: {
           Authorization: token // 토큰을 헤더에 포함
       }
@@ -595,7 +595,7 @@ function getCompleteDate(){
 
 function postCompleteCount(uuid, complete_count) {
   axios
-  .post("http://52.78.221.233:3000/users/postCompleteCount", {
+  .post("https://52.78.221.233:3000/users/postCompleteCount", {
       uuid: uuid ,
       complete_count : complete_count // 여기에 그 현재 운동값 넣으면 됨   
   })
@@ -611,7 +611,7 @@ function getNowCount() {
   const userid = localStorage.getItem("userid");
 
   axios
-  .post("http://52.78.221.233:3000/users/getNowCount", {
+  .post("https://52.78.221.233:3000/users/getNowCount", {
       userid : userid  
   })
   .then((response) => {

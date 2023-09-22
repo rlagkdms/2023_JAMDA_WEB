@@ -17,7 +17,7 @@ function change(){
     }
 
     axios
-    .post("http://52.78.221.233:3000/users/change-user-id", {
+    .post("https://52.78.221.233:3000/users/change-user-id", {
         userid : id
     }, {headers: { authorization: token }})
     .then((response) => {
@@ -35,7 +35,7 @@ function checkDuplicate() {
   
     // 아이디 중복 확인 API 엔드포인트 수정
         axios
-        .post("http://52.78.221.233:3000/users/check-duplicate", {
+        .post("https://52.78.221.233:3000/users/check-duplicate", {
             userid: id,
         })
         .then((response) => {

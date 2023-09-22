@@ -20,13 +20,13 @@ favorite_act.addEventListener('input', () => {
 });
 
 function addRuleAndBack() {
-  if (exer_select.innerHTML == '<input type="text"> <img src="../image/ep_arrow-up.svg">') {
+  if (exer_select.innerHTML == '<input type="text"> <img src="/image/ep_arrow-up.svg">') {
       exer_select = exer_select.firstChild.value;
   } else {
       exer_select = exer_select.innerText;
   }
 
-  if (exer_unit.innerHTML == '<input type="text"> <img src="../image/ep_arrow-up.svg">') {
+  if (exer_unit.innerHTML == '<input type="text"> <img src="/image/ep_arrow-up.svg">') {
       exer_unit = exer_unit.firstChild.value;
   } else {
       exer_unit = exer_unit.innerText;
@@ -90,7 +90,7 @@ function addRuleAndBack() {
   const id = localStorage.getItem("userid");
 
   // 서버로 데이터 전송
-  axios.post("http://52.78.221.233:3000/users/rules", {
+  axios.post("https://52.78.221.233:3000/users/rules", {
           userid: id,
           activity: favorite_act.value,
           exercise: exer_select,

@@ -39,7 +39,7 @@ function change() {
     }
   
     axios
-    .post("http://52.78.221.233:3000/users/change-password", {
+    .post("https://52.78.221.233:3000/users/change-password", {
         currentPassword: currentPw,
         newPassword: newPw,
       }, {headers: { authorization: token }})

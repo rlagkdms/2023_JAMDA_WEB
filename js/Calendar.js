@@ -322,7 +322,7 @@ function btnClose(){
     const userid = localStorage.getItem("userid");
     
     // 서버로 GET 요청을 보냅니다.
-    axios.post('http://52.78.221.233:3000/users/updateColor', {
+    axios.post('https://52.78.221.233:3000/users/updateColor', {
         userid : userid,
         color : colorValue
     })
@@ -342,7 +342,7 @@ function btnClose(){
 function getColor(){
     const token = localStorage.getItem("token");
 
-    axios.get('http://52.78.221.233:3000/users/getColor', {
+    axios.get('https://52.78.221.233:3000/users/getColor', {
         headers: {
             Authorization: token // 토큰을 헤더에 포함
         }
@@ -366,7 +366,7 @@ function getCompleteDate(){
     const token = localStorage.getItem("token");
     checkDate = document.getElementsByClassName('date');
 
-    axios.get('http://52.78.221.233:3000/users/getCompleteDate', {
+    axios.get('https://52.78.221.233:3000/users/getCompleteDate', {
         headers: {
             Authorization: token // 토큰을 헤더에 포함
         }
